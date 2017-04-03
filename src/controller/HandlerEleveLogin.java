@@ -1,8 +1,8 @@
-package com.gp1.controller;
+package controller;
 
-import com.gp1.model.core.Classe;
-import com.gp1.model.core.Eleve;
-import com.gp1.view.JPEleveLogin;
+import model.core.Classe;
+import model.core.Eleve;
+import view.JPEleveLogin;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

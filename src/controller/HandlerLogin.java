@@ -1,6 +1,6 @@
-package com.gp1.controller;
+package controller;
 
-import com.gp1.view.JPLogin;
+import view.JPLogin;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
