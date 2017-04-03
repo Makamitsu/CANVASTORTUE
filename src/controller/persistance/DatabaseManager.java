@@ -1,6 +1,6 @@
-package com.gp1.controller.persistance;
+package controller.persistance;
 
-import com.gp1.model.core.*;
+import model.core.*;
 
 import javax.swing.*;
 
