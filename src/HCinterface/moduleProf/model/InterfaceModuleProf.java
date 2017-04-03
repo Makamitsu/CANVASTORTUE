@@ -1,7 +1,7 @@
-package com.gp1.HCinterface.moduleProf.model;
+package HCinterface.moduleProf.model;
 
-import com.gp1.model.ModuleProf;
-import com.gp1.view.MainFrame;
+import model.ModuleProf;
+import view.MainFrame;
 
 /**
  * Created by ambie on 01/04/2017.
