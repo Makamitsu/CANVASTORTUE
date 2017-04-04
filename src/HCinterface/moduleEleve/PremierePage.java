@@ -35,7 +35,7 @@ public class PremierePage extends JPanel{
 		JLabel avancemen;
 		JLabel correctio;
 		
-		URL urlpasvalidee = getClass().getResource("paseffectuee.png");
+		URL urlpasvalidee = getClass().getResource("paseffectue.png");
 		URL urlvalide = getClass().getResource("valide.jpg");
 		URL urlpleure = getClass().getResource("pleure.jpg");
 		URL urlmoyen = getClass().getResource("moyen.jpg");
@@ -54,7 +54,7 @@ public class PremierePage extends JPanel{
 			{
 				if(null == av.getLastTentative())
 				{
-					etat = new ImageIcon(urlpasvalidee);
+					etat = new ImageIcon(urlvalide);
 					avancemen = new JLabel(etat);
 					icon = new ImageIcon(urlpasvalidee);
 					correctio = new JLabel(icon);
