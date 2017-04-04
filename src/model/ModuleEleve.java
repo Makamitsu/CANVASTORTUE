@@ -1,6 +1,6 @@
-package com.gp1.model;
+package model;
 
-import com.gp1.model.core.Eleve;
+import model.core.Eleve;
 
 /**
  * Created by ambie on 01/04/2017.

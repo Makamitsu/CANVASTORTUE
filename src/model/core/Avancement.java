@@ -1,4 +1,4 @@
-package com.gp1.model.core;
+package model.core;
 
 import java.util.ArrayList;
 
@@ -47,4 +47,16 @@ public class Avancement {
     public Tentative getLastTentative(){
         return tentatives.get(tentatives.size()-1);
     }
+
+	public Tentative getLastTentativeCorigee() {
+		Tentative ret = null;
+		for(Tentative t : tentatives)
+		{
+			if(null != t.getCorrection())
+			{
+				ret = t;
+			}
+		}
+		return ret;
+	}
 }
