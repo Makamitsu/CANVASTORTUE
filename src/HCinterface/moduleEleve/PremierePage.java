@@ -29,7 +29,7 @@ public class PremierePage extends JPanel{
 		JLabel l = new JLabel(modE.getEleve().getFirstName());
 		this.add(l, BorderLayout.NORTH);
 		JPanel p = new JPanel();
-		p.setLayout(new GridLayout(0,3));
+		p.setLayout(new GridLayout(0,4));
 		JButton b = new JButton();
 		JLabel nomex;
 		JLabel avancemen;
