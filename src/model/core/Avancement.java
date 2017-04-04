@@ -45,7 +45,16 @@ public class Avancement {
     }
 
     public Tentative getLastTentative(){
-        return tentatives.get(tentatives.size()-1);
+    	Tentative ret = null;
+    	if(tentatives.size() != 0)
+    	{
+    		return tentatives.get(tentatives.size()-1);
+    	}
+    	else
+    	{
+    		return ret;
+    	}
+        
     }
 
 	public Tentative getLastTentativeCorigee() {

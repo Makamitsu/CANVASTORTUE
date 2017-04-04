@@ -17,7 +17,7 @@ public class DatabaseManager {
         Classe classe2 = new Classe("CM1",ecole);
         Professeur prof1 = new Professeur("George","Poutou",classe1,"toto","12345");
         Professeur prof2 = new Professeur("Isabelle","Charlinson",classe2,"titi","12345");
-        Eleve e1 = new Eleve("ClÃ©ment"  ,"Morisset" ,classe1,Sexe.GARCON,7);
+        Eleve e1 = new Eleve("Clément"  ,"Morisset" ,classe1,Sexe.GARCON,7);
         Eleve e2 = new Eleve("Caroline" ,"Bonnet"   ,classe1,Sexe.FILLE,8);
         Eleve e3 = new Eleve("Gael"     ,"Beaurin"  ,classe1,Sexe.GARCON,8);
         Eleve e4 = new Eleve("Hugo"     ,"Muller"   ,classe1,Sexe.GARCON,8);

@@ -1,4 +1,4 @@
-package com.gp1.model.core;
+package model.core;
 
 /**
  * Created by ambie on 29/03/2017.

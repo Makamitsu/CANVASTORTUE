@@ -1,4 +1,4 @@
-package com.gp1.model.core;
+package model.core;
 
 
 /**

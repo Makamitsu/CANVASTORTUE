@@ -1,4 +1,4 @@
-package com.gp1.model.core;
+package model.core;
 
 import java.util.ArrayList;
 
@@ -20,6 +20,13 @@ public class Ecole {
 
     public void addExercice(Exercice e){
         exercices.add(e);
+        for(Classe c : classes)
+        {
+        	for(Eleve el : c.getEleves())
+        	{
+        		el.startExercice(e);
+        	}
+        }
     }
 
     public void removeExercice(Exercice e){

@@ -2,6 +2,7 @@ package HCinterface.moduleEleve;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.net.URL;
 
 import javax.swing.*;
 
@@ -27,51 +28,71 @@ public class PremierePage extends JPanel{
 		this.setLayout(new BorderLayout());
 		JLabel l = new JLabel(modE.getEleve().getFirstName());
 		this.add(l, BorderLayout.NORTH);
-		JScrollPane scr = new JScrollPane();
-		scr.setLayout(new GridLayout(0,3));
+		JPanel p = new JPanel();
+		p.setLayout(new GridLayout(0,3));
 		JButton b = new JButton();
 		JLabel nomex;
+		JLabel avancemen;
+		JLabel correctio;
+		
+		URL urlpasvalidee = getClass().getResource("paseffectuee.png");
+		URL urlvalide = getClass().getResource("valide.jpg");
+		URL urlpleure = getClass().getResource("pleure.jpg");
+		URL urlmoyen = getClass().getResource("moyen.jpg");
+		URL urlsourire = getClass().getResource("sourire.jpg");
+		
 		ImageIcon etat;
 		ImageIcon icon;
-		for(Exercice ex : modE.getEleve().getClasse().getEcole().getExercices())
+		for(int i = 0; i<modE.getEleve().getClasse().getEcole().getExercices().size();i++)
 		{
+			Exercice ex = modE.getEleve().getClasse().getEcole().getExercices().get(i);
+
 			nomex = new JLabel(ex.getName());
+			
 			Avancement av = modE.getEleve().getAvancement(ex);
-			if(null == av.getLastTentative())
+			if(null != av)
 			{
-				etat = new ImageIcon("images/paseffectue.jpg");
-				icon = new ImageIcon("images/pascorrige.jpg");
-			}
-			else
-			{
-				etat = new ImageIcon("images/valide.jpg");
-				Tentative res = modE.getEleve().getAvancement(ex).getLastTentativeCorigee();
-				if(null == res)
+				if(null == av.getLastTentative())
 				{
-					icon = new ImageIcon("images/pascorrige.jpg");
+					etat = new ImageIcon(urlpasvalidee);
+					avancemen = new JLabel(etat);
+					icon = new ImageIcon(urlpasvalidee);
+					correctio = new JLabel(icon);
 				}
 				else
 				{
-					if(res.getCorrection().getNote().equals("ACQUIS"))
+					etat = new ImageIcon(urlvalide);
+					avancemen = new JLabel(etat);
+					Tentative res = modE.getEleve().getAvancement(ex).getLastTentativeCorigee();
+					if(null == res)
 					{
-						icon = new ImageIcon("images/sourire.jpg");
-					}
-					else if(res.getCorrection().getNote().equals("EN_COURS_AQUISITION"))
-					{
-						icon = new ImageIcon("images/moyen.jpg");
+						icon = new ImageIcon(urlpasvalidee);
+						correctio = new JLabel(icon);
 					}
 					else
 					{
-						icon = new ImageIcon("images/pleure.jpg");
+						if(res.getCorrection().getNote().equals("ACQUIS"))
+						{
+							icon = new ImageIcon(urlsourire);
+							correctio = new JLabel(icon);
+						}
+						else if(res.getCorrection().getNote().equals("EN_COURS_AQUISITION"))
+						{
+							icon = new ImageIcon(urlmoyen);
+							correctio = new JLabel(icon);
+						}
+						else
+						{
+							icon = new ImageIcon(urlpleure);
+							correctio = new JLabel(icon);
+						}
 					}
 				}
+				p.add(nomex);
+				p.add(avancemen);
+				p.add(correctio);
 			}
-			
-			
-			
-			
 		}
-		
+		this.add(p, BorderLayout.CENTER);
 	}
-	
 }

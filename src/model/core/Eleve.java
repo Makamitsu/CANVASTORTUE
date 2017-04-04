@@ -1,4 +1,4 @@
-package com.gp1.model.core;
+package model.core;
 
 import java.util.HashMap;
 
@@ -40,10 +40,13 @@ public class Eleve extends Individu {
 
     public Avancement getAvancement(Exercice e){
         if(classe.getEcole().exercicesContains(e)){
-
             return avancements.get(e);
         }
-        return null;
+        else
+        {
+            return null;
+        }
+
     }
 
 
